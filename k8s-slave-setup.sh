@@ -3,6 +3,9 @@
 
 read -p "Enter Join Command :- "  join_command
 
+yum install docker
+
+systemctl start docker 
 
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
