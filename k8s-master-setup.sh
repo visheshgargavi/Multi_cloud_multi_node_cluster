@@ -2,6 +2,9 @@
 
 read -p "Enter Control Plane Endpoint :- "  endpoint
 
+yum install docker -y
+
+systemctl start docker 
 
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
